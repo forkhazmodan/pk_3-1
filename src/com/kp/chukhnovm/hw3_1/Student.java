@@ -1,10 +1,11 @@
 package com.kp.chukhnovm.hw3_1;
 
 import com.kp.chukhnovm.hw3_1.Enums.Gender;
+import com.kp.chukhnovm.hw3_1.Interfaces.CompatibleCSV;
 
 import java.util.*;
 
-public class Student extends Human {
+public class Student extends Human implements CompatibleCSV {
 
     private String documentId;
 
@@ -58,6 +59,11 @@ public class Student extends Human {
                 gender.getDescription(),
                 this.getDocumentId()
         );
+    }
+
+    @Override
+    public Student fromCSVString(String string) {
+        return null;
     }
 
     @Override
